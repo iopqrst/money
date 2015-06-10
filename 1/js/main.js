@@ -28,6 +28,8 @@
 	$(".add").click(function() {
 		// $(this).prev() 就是当前元素的前一个元素，即 text_box
 		$(this).prev().val(parseInt($(this).prev().val()) + 1);
+		
+		calculate();
 	});
 	
 	$(".min").click(function() {
@@ -37,9 +39,31 @@
 		} else {
 			$(this).next().val(1);
 		}
+		
+		calculate();
 	});
 	
 	$("#S_package").change(function(){
 		$(this).blur();
 	});
+	
+	$("#S_packageSelect").change(calculate);
+	
+	function calculate() {
+		var packageVal = $("#S_packageSelect").val();
+		var packageAmount = $("#S_packageAmount").val();
+		
+		if(!packageVal) {
+			packageVal = 5;
+		}
+		
+		if(!packageAmount) {
+			packageAmount = 1;
+		}
+		
+		var total = packageAmount * packageVal;
+		
+		$(".i_title em").html(total);
+		$(".price_style").html(total);
+	}
 })(Zepto);

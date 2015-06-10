@@ -205,7 +205,6 @@ html {
 }
 /*试算部分*/
 /*按钮*/
-
 /*遮罩部分*/
 
 .us_panel_msk {
@@ -357,6 +356,7 @@ ul {
 	font-family: "微软雅黑";
 	font-weight: bolder;
 	font-size: 15px;
+	outline:none;
 }
 #sleHid {
 	display: block;
@@ -373,7 +373,6 @@ ul {
 .us_panel_menu_t tr td:first-child {
 	padding: 3%;
 }
-
 .fixed_bottom {
 	width: 100%;
 	position: fixed;
@@ -381,10 +380,46 @@ ul {
 	z-index: 999999;
 	background: #FFFFFF;
 }
-
 .mybtn {
 	position: absolute;
 	width: 80%;
-	left:10%;
+	left: 10%;
 	bottom: 10px;
 }
+
+/* select 样式开始*/
+.sel_wrap {
+	height: 40px;
+	background: url(../images/jiantou_xiangxia.png) no-repeat 180px 12px;
+	color: #a1a1a1;
+	font-size: 16px;
+	cursor: pointer;
+	position: relative;
+	_filter: alpha(opacity=0);
+}
+.sel_wrap label {
+	padding-right: 50px;
+	font-size: 16px;
+	z-index: 2;
+	color: #FF9801;
+	line-height: 40px;
+	height: 40px;
+	display: block;
+}
+.sel_wrap .select {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	z-index: 4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	*margin-top: 12px;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+	font-size: 16px;
+}
+/* select 样式结束*/

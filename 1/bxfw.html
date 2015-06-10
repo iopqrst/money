@@ -9,6 +9,9 @@
 		<meta name="history" content="" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
 		<link id="" rel="stylesheet" type="text/css" href="./css/style.css">
+		<style type="text/css">
+			
+		</style>
 	</head>
 
 	<body>
@@ -28,11 +31,11 @@
 				</li>
 			</ul>
 		</div>
-		
+
 		<div class="dsx_img pad200">
 			<img src="./images/bxfw_01.jpg" border="0" alt="" />
 		</div>
-		
+
 		<div class="fixed_bottom">
 			<div class="dsx_price fl">
 				<div class="fl cleft">保险费<span class="price_style">5</span>元</div>
@@ -40,8 +43,9 @@
 					<span><img src="./images/dsx_up.jpg" width="17" height="13" border="0" alt="" /></span>
 				</div>
 			</div>
-	
+
 			<div class="clear"></div>
+	
 			<a id="S_submit" href="javascript:;" target="_self" class="dsx_img mybtn">
 				<img src="./images/dsx_btn.jpg" width='90%'>
 			</a>
@@ -70,23 +74,41 @@
 						<td align="right">
 							<span id="sleBG">
 								<span id="sleHid">   
-									<select name="type" class="select">    
-									<option selected="selected">请选择</option>    
-									<option value="1">图书</option>    
-									<option value="2">音像</option>    
+									<select class="select" id="S_packageSelect">    
+									<option value="" selected="selected">请选择</option>    
+									<option value="5">图书</option>    
+									<option value="10">音像</option>    
 									</select>   
 									&nbsp;&nbsp;&nbsp;&nbsp;
+
 								</span>
 							</span>
 						</td>
 					</tr>
+					<!--
+					<tr height="40">
+						<td>
+							<sapn class="i_title">套餐：</sapn>
+						</td>
+						<td align="right">
+							<div class="sel_wrap">
+								<label>请选择</label>
+								<select class="select"  id="S_packageSelect">
+									<option value="5">套餐0</option>
+									<option value="10">套餐1</option>
+									<option value="15">套餐2</option>
+									<option value="20">套餐3</option>
+								</select>
+							</div>
+						</td>
+					</tr>-->
 					<tr height="40">
 						<td>
 							<span class="i_title">份数：</span>
 						</td>
 						<td align="right">
 							<input class="min" name="" type="button" value="-" style="color:#FF9801;font-size:35px;line-height:30px;vertical-align: top;" />
-							<input class="text_box" name="goodnum" type="text" value="1" style="vertical-align: top;" />
+							<input class="text_box" id="S_packageAmount" type="text" value="1" style="vertical-align: top;" />
 							<input class="add" name="" type="button" value="+" style="color:#FF9801;font-size:25px;vertical-align: top;" /> &nbsp;&nbsp;&nbsp;&nbsp;
 						</td>
 					</tr>
@@ -101,6 +123,19 @@
 
 		<script language="javascript" src="js/zepto.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+
+		<script type="text/javascript">
+			$(".sel_wrap").on("change", function() {
+				var o;
+				var opt = $(this).find('option');
+				opt.each(function(i) {
+					if (opt[i].selected == true) {
+						o = opt[i].innerHTML;
+					}
+				})
+				$(this).find('label').html(o);
+			}).trigger('change');
+		</script>
 	</body>
 
 </html>
