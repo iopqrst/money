@@ -1,9 +1,9 @@
 (function($) {
 	$('#S_show_pop').click(function() {
 		if ($('#us_panel_menu').hasClass('show')) {
-			$(".dsx_price").show();
 			$('#us_panel_menu').removeClass('show');
 			$('.arrow_top').removeClass('open');
+			$(".dsx_price").show();
 			$(window).unbind('touchmove');
 		} else {
 			$(".dsx_price").hide();
@@ -37,5 +37,9 @@
 		} else {
 			$(this).next().val(1);
 		}
+	});
+	
+	$("#S_package").change(function(){
+		$(this).blur();
 	});
 })(Zepto);

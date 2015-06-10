@@ -39,6 +39,9 @@ input {
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 }
+img {
+	border: none;
+}
 /*----------gobal------------*/
 
 html {
@@ -170,7 +173,6 @@ html {
 	height: 65px;
 	background-color: #F3F3F3;
 	line-height: 65px;
-	margin-top: 70px;
 	margin-bottom: 70px;
 	font-family: "微软雅黑";
 	font-weight: bolder;
@@ -204,7 +206,6 @@ html {
 /*试算部分*/
 /*按钮*/
 
-#S_show_pop {}
 /*遮罩部分*/
 
 .us_panel_msk {
@@ -369,19 +370,21 @@ ul {
 	border-radius: 5px;
 	text-align: center;
 }
-.mybtn {
-	width: 80%;
-	position: fixed;
-	bottom: 10px;
-	left: 10%;
-	-z-index: 999999;
-}
 .us_panel_menu_t tr td:first-child {
 	padding: 3%;
 }
+
 .fixed_bottom {
 	width: 100%;
 	position: fixed;
-	bottom: 10px;
+	bottom: 0px;
 	z-index: 999999;
+	background: #FFFFFF;
+}
+
+.mybtn {
+	position: absolute;
+	width: 80%;
+	left:10%;
+	bottom: 10px;
 }
