@@ -118,6 +118,11 @@ html {
 .dsx_cheng {
 	color: #FF9801;
 }
+.dsx_red {
+	/*2015-6-10*/
+	
+	color: red;
+}
 /*头部和底部*/
 
 .dsx_img {
@@ -173,6 +178,7 @@ html {
 	height: 65px;
 	background-color: #F3F3F3;
 	line-height: 65px;
+	-margin-top: 70px;
 	margin-bottom: 70px;
 	font-family: "微软雅黑";
 	font-weight: bolder;
@@ -205,6 +211,8 @@ html {
 }
 /*试算部分*/
 /*按钮*/
+
+#S_show_pop {}
 /*遮罩部分*/
 
 .us_panel_msk {
@@ -354,9 +362,9 @@ ul {
 	border: none;
 	color: #FF9801;
 	font-family: "微软雅黑";
+	outline: none;
 	font-weight: bolder;
 	font-size: 15px;
-	outline:none;
 }
 #sleHid {
 	display: block;
@@ -385,4 +393,70 @@ ul {
 	width: 80%;
 	left: 10%;
 	bottom: 10px;
+}
+/*2015-6-10文字补充部分*/
+
+.dsx_tit {
+	width: 100%;
+	margin: 10px auto;
+}
+.dsx_tit_text {
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	font-size: 16px;
+	margin-left: 20px;
+	height: 30px;
+}
+.fs25 {
+	font-size: 25px;
+}
+.fs20 {
+	font-size: 20px;
+}
+.dsx_hui {
+	color: #aaa;
+}
+.ml20 {
+	margin-left: 20%;
+}
+.dsx_content {
+	width: 100%;
+	height: 350px;
+	margin-bottom: 100px;
+}
+.dsx_content ul,
+.content {
+	width: 85%;
+	margin: 10px auto;
+}
+.dsx_content ul li,
+.content li {
+	color: #aaa;
+	font-size: 15px;
+	border-bottom: 1px dashed #FF9801;
+	height: 100%;
+	line-height: 30px;
+	margin: 10px auto;
+}
+.dsx_kuai {
+	background-color: #F1F1F1;
+	width: 35%;
+	height: 65px;
+	margin: 4%;
+	padding: 10px;
+	line-height: 25px;
+}
+.dsx_lpal_content {
+	width: 90%;
+	height: 100%;
+	border: 2px solid #FF9801;
+	border-radius: 5px;
+	margin: 10px auto 200px;
+	padding: 10px;
+}
+.dsx_lpal_text {
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	color: #aaa;
 }
