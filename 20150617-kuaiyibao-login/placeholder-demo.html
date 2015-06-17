@@ -16,16 +16,14 @@
 				border: none;
 			}
 			input {
-				background: transparent;
-				-background-color: #FFA500;
+				-background: transparent;
+				background-color: #FFA500;
 				height: 40px;
 				font-size: 18px;
 				line-height: 40px;
 				color: #fff;
 			}
-			input[type='password'] {
-				font-weight: 900;
-			}
+			
 			p {
 				border-bottom:1px solid #FFA500;
 				height: 50px;
@@ -37,23 +35,14 @@
 				float: left;
 				width: 150px;
 			}
-			input {
-				width: 14em;
-			}
+	
 			textarea {
 				height: 5em;
 				width: 20em;
 			}
 			.my-placeholder {
-				color: green;
-				font-size: 20px;
+				color: #FFFFFF;
 			}
-			.note {
-				border: 1px solid orange;
-				padding: 1em;
-				background: #ffffe0;
-			}
-			/* #p { background: lime; } */
 		</style>
 	</head>
 
@@ -67,7 +56,7 @@
 			</p>
 			<p>
 				<label for="p"><code>type=password</code> </label>
-				<input type="password" name="password" placeholder="******" id="p"/>
+				<input type="password" name="password" value="Password" placeholder="Password" id="p" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
 			</p>
 		</form>
 		<script src="js/jquery1.10.2.min.js"></script>

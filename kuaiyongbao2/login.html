@@ -7,14 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
 		<script src="js/jquery1.10.2.min.js"></script>
-		<script src="js/jquery.placeholder.min.js"></script>
 		<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
 		<!--[if IE 6]>
 		<script src="js/DD_belatedPNG.js"></script>
 		<script>
-			DD_belatedPNG.fix('*');
+			DD_belatedPNG.fix('div, ul, img, li, input , a');
 		</script>
+
 		<![endif]-->
+
 	</head>
 
 	<body>
@@ -40,7 +41,7 @@
 				<span class="text_pag">10/23</span>
 			</div>
 			<div class="text_contents">
-				这世界上只有一种成功，就是能够用自己喜欢的方式度过自己的一生。
+				这世界上只有一种成功，就是能够用自己喜欢的方式度过自己的一生。这世界上只有一种成功，就是能够用自己喜欢的方式度过自己的一生。
 			</div>
 		</div>
 		<div class="login">
@@ -49,25 +50,19 @@
 			</div>
 			<div class="login_form">
 				<form>
-					<p>
-						<label class="lb_icon lb_username">&nbsp;</label>
-						<input class="input_txt" type="text" name="tel" value="请输入您的用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的用户名';}"/>
-					</p>
-					<p>
-						<label class="lb_icon lb_pwd">&nbsp;</label>
-						<input class="input_txt" type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
-					</p>
-					
-					<div class="jzpass">
-						<span class="cbox">&nbsp;</span>
-						<span class="cbox_text">记住密码</span>
-						<input type="hidden" name="remPwd" id="S_remPwd" value="0"/>
+					<input type="text" class="text" value="请输入您的用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的用户名';}" id="form_text">
+					<div class="key">
+						<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" id="form_pass">
 					</div>
-					
-					<div class="signin">
-						<input type="submit" value="登 录">
+					<div class="jzpass">
+						<a class="cbox"></a>
+						<span class="cbox_text">记住密码</span>
+						<input type="hidden" name="remPwd" id="S_remPwd" value="0" />
 					</div>
 				</form>
+				<div class="signin">
+					<input type="submit" value="登 录" id="form_submit">
+				</div>
 
 				<div class="down">
 					<div class="down_az">
@@ -99,9 +94,8 @@
 						$remPwd.val(1);
 					}
 				});
-				
-				//$(".cbox_text").trigger();
 			});
+		</script>
 		</script>
 	</body>
 
