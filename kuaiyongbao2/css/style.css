@@ -413,27 +413,33 @@ h1 {
 	-o-border-top-right-radius: 10p
 }
 #form_text {
-	width: 70%;
+	width: 85%;
 	padding: 2em 2em 2em 3em;
 	color: #fff;
+	color: rgba(255,255,255,0.9);
+	_color: #fff;
 	font-size: 18px;
 	outline: none;
 	background: url(../images/name.png) no-repeat 10px 30px;
 	border: none;
 	font-weight: 100;
 	border-bottom: 1px solid #fff;
+	border-bottom: 2px solid rgba(255,255,255, 0.3);
 	margin-top: 2em;
 }
 #form_pass {
-	width: 70%;
+	width: 85%;
 	padding: 2em 2em 2em 3em;
 	color: #fff;
+	color: rgba(255,255,255,0.9);
+	_color: #fff;
 	font-size: 18px;
 	outline: none;
 	background: url(../images/password.png) no-repeat 10px 30px;
 	border: none;
 	font-weight: 100;
 	border-bottom: 1px solid #fff;
+	border-bottom: 2px solid rgba(255,255,255, 0.3);
 }
 #form_submit {
 	font-size: 30px;
@@ -458,4 +464,5 @@ h1 {
 	-moz-border-radius: 7px;
 	-o-border-radius: 7px;
 }
+
 /*--end-responsive-design--*/
