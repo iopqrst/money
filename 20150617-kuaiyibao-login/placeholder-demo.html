@@ -40,7 +40,7 @@
 				height: 5em;
 				width: 20em;
 			}
-			.my-placeholder {
+			.myplaceholder::-webkit-input-placeholder {
 				color: #FFFFFF;
 			}
 		</style>
@@ -51,12 +51,12 @@
 		<form>
 			<p>
 				<label><code>type=tel</code>
-					<input type="tel" name="tel" placeholder="e.g. +32 472 77 69 88">
+					<input type="text" name="tel" placeholder="e.g. +32 472 77 69 88">
 				</label>
 			</p>
 			<p>
 				<label for="p"><code>type=password</code> </label>
-				<input type="password" name="password" value="Password" placeholder="Password" id="p" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
+				<input type="password" name="password" placeholder="Password"/>
 			</p>
 		</form>
 		<script src="js/jquery1.10.2.min.js"></script>
@@ -68,7 +68,7 @@
 			$(function() {
 				// Invoke the plugin
 				$('input, textarea').placeholder({
-					customClass: 'my-placeholder'
+					customClass: 'myplaceholder'
 				});
 			});
 		</script>
