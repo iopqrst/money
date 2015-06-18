@@ -276,6 +276,7 @@ input[type="text"],
 .down img,
 .down span {
 	vertical-align: middle;
+	font-size: 14px;
 }
 .down_az {
 	width: 190px;
