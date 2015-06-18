@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<htmlc>
+	<meta charset="UTF-8" />
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<style type="text/css">
+			/*按钮*/
+			
+			#S_show_pop {
+				margin: 0px auto;
+				position: fixed;
+				height: 50px;
+				width: 200px;
+				left: 50%;
+				margin-left: -100px;
+				bottom: 10px;
+			}
+			/*遮罩部分*/
+			
+			.us_panel_msk {
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.6);
+				position: fixed;
+				top: 0;
+				left: 0;
+				visibility: hidden;
+				opacity: 0;
+				-webkit-transition: all 0.3s linear;
+				-moz-transition: all 0.3s linear;
+				-o-transition: all 0.3s linear;
+				transition: all 0.3s linear
+			}
+			#us_panel_menu.show .us_panel_msk {
+				opacity: 1;
+				visibility: visible;
+			}
+			#us_panel_menu.show .us_panel_menu_t {
+				-webkit-transform: translateY(0px);
+				-moz-transform: translateY(0px);
+				-o-transform: translateY(0px);
+				transform: translateY(0px);
+				visibility: visible;
+				-webkit-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+				-moz-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+				-o-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+				transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1)
+			}
+			.us_panel_menu_t {
+				height: 280px;
+				display: block;
+				width: 100%;
+				position: fixed;
+				bottom: 0px;
+				left: 0;
+				background: #f3f3f3;
+				-webkit-transform: translateY(300px);
+				-moz-transform: translateY(300px);
+				-o-transform: translateY(300px);
+				transform: translateY(300px);
+				visibility: hidden;
+				-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+				-moz-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+				-o-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+				transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+			}
+			.us_panel_menu_t table {
+				height: 100%;
+				border-collapse: collapse;
+				font-family: "微软雅黑";
+			}
+			.us_panel_menu_t table td {
+				border-bottom: 1px solid #ff9700;
+			}
+			.us_panel_menu_t table tr:last-child td {
+				border: none;
+			}
+			.us_panel_menu_t tr td:first-child {
+				width: 50%;
+				padding: 5%;
+			}
+			.i_title {
+				font-size: 1.25em;
+			}
+			.i_title em {
+				font-size: 1.5em;
+				font-style: normal;
+				color: #ff9800;
+			}
+		</style>
+		<title></title>
+	</head>
+
+	<body>
+		<div id="us_panel_menu">
+			<div class="us_panel_msk"></div>
+			<div class="us_panel_menu_t">
+				<table width="100%" cellspacing="0">
+					<tr height="40">
+						<td>
+							<span class="i_title">保护费<em>5</em>元</span>
+						</td>
+						<td align="right">
+							试算 》
+						</td>
+					</tr>
+					<tr height="40">
+						<td>
+							<sapn class="i_title">套餐：</sapn>
+						</td>
+						<td>
+							<select id="series" style="height:40px;">
+								<option value="standard">Standard: 7 day</option>
+								<option value="rush">Rush: 3 days</option>
+								<option value="express">Express: next day</option>
+								<option value="overnight">Overnight</option>
+							</select>
+						</td>
+					</tr>
+					<tr height="40">
+						<td>
+							<sapn class="i_title">份数：</sapn>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr height="60">
+						<td>
+							&nbsp;
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<input type="button" value="马上问医生" id="S_show_pop" />
+
+		<script language="javascript" src="js/zepto.min.js"></script>
+		<script language="javascript" src="js/fx.js"></script>
+		<script type="text/javascript" src="js/jquery.chained.min.js" ></script>
+		<script type="text/javascript" src="js/zepto.selector.js" ></script>
+		<script>
+			(function($) {
+				$('#S_show_pop').click(function() {
+					if ($('#us_panel_menu').hasClass('show')) {
+						$('#us_panel_menu').removeClass('show');
+						$('.arrow_top').removeClass('open');
+						$(window).unbind('touchmove');
+					} else {
+						$('#us_panel_menu').addClass('show');
+						$('.arrow_top').addClass('open');
+						$(window).bind('touchmove', function(e) {
+							e.preventDefault();
+							e.stopImmediatePropagation();
+						});
+					}
+				});
+				$('.us_panel_msk').click(function() {
+					$('#S_show_pop').trigger('click');
+				});;
+				
+			})(Zepto);
+		</script>
+	</body>
+
+	</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html>
+	<meta name="viewport" content="width=640,target-densityDpi=device-dpi, user-scalable=no">
+	<head>
+		<meta charset="utf-8">
+		<title>原生javascript手风琴导航</title>
+		<style>
+			* {margin:0; padding: 0;}
+			#bigbox {
+				width: 300px;
+				position: relative;
+				margin: 10px auto;
+			}
+			.box {
+				background: #FFFFFF;
+				font-family: "microsoft yahei";
+				color: #000;
+				text-align: center;
+				border: 1px solid #ff9800;
+				border-radius: 5px;
+				cursor: pointer;
+				padding: 10px 20px 10px 0;
+				position: relative;
+				margin-top: 15px;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+			.arrow {
+				width: 0;
+				height: 0;
+				border-style: solid dashed none dashed;
+				border-width: 5px 5px 5px 5px;
+				border-color: #ff9800 transparent transparent transparent;
+				font-size: 0;
+				line-height: 0;
+				position: absolute;
+				right: 18px;
+				top: 17px;
+			}
+			
+			.box_x {
+				background: #ff9800;
+			}
+			
+			.box_x .arrow {
+				border-style: none dashed solid dashed;
+				border-width: 5px 5px 5px 5px;
+				border-color: transparent transparent #fff transparent;
+			}
+
+			ul {
+				list-style: none;
+			}
+			.content {
+				display: none;
+			}
+			.content li {
+				cursor: pointer;
+				padding: 5px 0;
+			}
+			.content li:hover {
+				background: #AAA;
+			}
+			.block {
+				display: block;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var addClass = function(element, oClass) {
+					if (!hasClass(element, oClass)) {
+						element.className += ' ' + oClass
+					}
+				}
+				var hasClass = function(element, oClass) {
+					return element.className.match(new RegExp('(^|\\s)' + oClass + '(\\s|$)'))
+				}
+				var removeClass = function(element, oClass) {
+					var cls = new RegExp('(^|\\s)' + oClass + '(\\s|$)');
+					if (hasClass(element, oClass)) {
+						element.className = element.className.replace(cls, '')
+					}
+				}
+				var toggleClass = function(element, oClass) {
+					if (!hasClass(element, oClass)) {
+						addClass(element, oClass)
+					} else {
+						removeClass(element, oClass)
+					}
+				}
+				var getElementsByClassName = function(cname, oParent) {
+					if (oParent == null) {
+						oParent = document
+					};
+					if (oParent.getElementsByClassName) {
+						return oParent.getElementsByClassName(cname)
+					} else {
+						var all = oParent.getElementsByTagName("*");
+						var j = all.length;
+						var theClass = new RegExp("(^|\\s)" + cname + "(\\s|$)");
+						var result = new Array();
+						for (var i = 0; i < j; i++) {
+							var allClass = all[i].className;
+							if (theClass.test(allClass)) {
+								result.push(all[i])
+							}
+						}
+						return result
+					}
+				}
+				var getStyle = function(element, prop) {
+					if (element.currentStyle) {
+						return element.currentStyle[prop]
+					} else {
+						return window.getComputedStyle(element)[prop]
+					}
+				};
+				var box = getElementsByClassName("box");
+				var content = getElementsByClassName("content");
+				for (var i = 0,
+					j = box.length; i < j; i++) {
+					box[i].index = i;
+					box[i].onclick = function() {
+						var mm = content[this.index];
+						for (var v = 0; v < j; v++) {
+							if (v != this.index) {
+								removeClass(content[v], "block");
+								removeClass(box[v], "box_x")
+							}
+						};
+						toggleClass(mm, "block");
+						toggleClass(this, "box_x")
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="bigbox">
+			<div class="box"><span>甲甲甲甲甲甲甲甲甲甲</span>
+				<i class="arrow"></i>
+			</div>
+			<ul class="content">
+				<li>aaaaaaaaaaaaaaaa</li>
+				<li>bbbbbbbbbbbbbbbb</li>
+				<li>cccccccccccccccc</li>
+				<li>ddddddddddddddddd</li>
+			</ul>
+			<div class="box"><span>乙乙乙乙乙乙乙乙乙乙</span>
+				<i class="arrow"></i>
+			</div>
+			<ul class="content">
+				<li>aaaaaaaaaaaaaaaa</li>
+				<li>bbbbbbbbbbbbbbbb</li>
+				<li>cccccccccccccccc</li>
+				<li>ddddddddddddddddd</li>
+			</ul>
+			<div class="box"><span>丙丙丙丙丙丙丙丙丙丙</span>
+				<i class="arrow"></i>
+			</div>
+			<ul class="content">
+				<li>aaaaaaaaaaaaaaaa</li>
+				<li>bbbbbbbbbbbbbbbb</li>
+				<li>cccccccccccccccc</li>
+				<li>ddddddddddddddddd</li>
+			</ul>
+			<div class="box"><span>丁丁丁丁丁丁丁丁丁丁</span>
+				<i class="arrow"></i>
+			</div>
+			<ul class="content">
+				<li>aaaaaaaaaaaaaaaa</li>
+				<li>bbbbbbbbbbbbbbbb</li>
+				<li>cccccccccccccccc</li>
+				<li>ddddddddddddddddd</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
