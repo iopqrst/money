@@ -1,0 +1,525 @@
+@charset "utf-8";
+/* 页面共有样式  start */
+/**
+ * 渐变背景
+ */
+
+.gradient {
+	background: url(../img/gradient_title.jpg) 0 0 repeat-x;
+	height: 70px;
+	line-height: 70px;
+	width: 100%;
+	color: #fed701;
+}
+.gradient.align-left {
+	text-align: left;
+}
+.gradient.align-center {
+	text-align: center;
+}
+.gradient.align-right {
+	text-align: left;
+}
+/**
+ * 按钮 
+ */
+
+.btn {
+	height: 58px;
+	line-height: 58px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+}
+.btn_gray {
+	background: #b4b4b4;
+	width: 366px;
+}
+.btn_yellow {
+	background: #fcb800;
+	width: 366px;
+}
+.btn_yellow:hover {
+	-webkit-transition: .8s ease all;
+	background: #fbc942;
+}
+/* 三角 */
+
+.triangle_down {
+	display: block;
+	height: 0px;
+	width: 0px;
+	line-height: 0px;
+	border-top: 10px solid #454195;
+	border-left: 18px dashed transparent;
+	border-right: 18px dashed transparent;
+	border-bottom: 18px dashed transparent;
+}
+h1,
+h2,
+h3 {
+	color: #4963ae;
+}
+.fontRed {
+	color: #ff0000;
+}
+/*页面中常用的颜色*/
+
+.zise,
+a.zise {
+	color: #6763B9;
+}
+/* 页面共有样式 end */
+/**
+ * 确认信息页面样式
+ */
+
+.qrxx_body_bg {
+	background: #413d92 url(../img/querenxinxi_hd_bg.jpg) top center no-repeat;
+}
+.qrxx_content {
+	position: relative;
+	border: 5px solid #6a66bb;
+	width: 980px;
+	margin: 0 auto;
+}
+.qrxx_content .triangle_qrxx {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+}
+.qrxx_container {
+	height: 552px;
+	width: 924px;
+	background: #fff;
+	padding: 44px 28px;
+}
+.h_tbr {
+	width: 482px;
+	height: 100%;
+	float: left;
+}
+.h_btbr {
+	background: url(../img/separate_line.jpg) 0px 0px no-repeat;
+	width: 422px;
+	height: 100%;
+	float: left;
+	padding-left: 20px;
+}
+.h_ul_content {
+	padding-left: 25px;
+	color: #666;
+	font-size: 14px;
+}
+.h_ul_content li {
+	line-height: 30px;
+	height: 30px;
+}
+.h_ul_content span {
+	color: #999;
+}
+.h_tbxx,
+.h_bxfa,
+.h_btn_area,
+.zfym_jine,
+.zfym_zffs {
+	width: 924px;
+}
+.h_bxfa h1,
+.h_tbr h1,
+.h_btbr h1 {
+	font-size: 18px;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 25px;
+}
+.h_tbxx {
+	height: 176px;
+}
+.h_bxfa {
+	margin-top: 12px;
+	width: 922px;
+	height: 250px;
+	border: 1px solid #eee;
+	background: #fafafa;
+}
+.h_bxfa_content {
+	width: 300px;
+	height: 150px;
+	margin: 0px auto;
+}
+.h_ul_content ul {
+	color: #666;
+	font-size: 14px;
+}
+.h_bxfa_content li {
+	line-height: 30px;
+	height: 30px;
+}
+.h_bxfa_content span {
+	color: #999;
+}
+.h_bxfa_content span.fontRed {
+	color: #FF0000;
+	font-size: 18px;
+}
+.h_bxfa_content p {
+	color: #666;
+	padding-top: 10px;
+	height: 20px;
+	line-height: 20px;
+}
+.h_btn_area {
+	margin: 48px 0px;
+	text-align: center;
+}
+/**
+ * 投保成功 
+ */
+
+.tbcg_body_bg {
+	background: #413d92 url(../img/tbcg_hd_bg.jpg) top center no-repeat;
+}
+.tbcg_result_img {
+	margin: 20px 0;
+}
+.tbcg_content {
+	font-size: 18px;
+	line-height: 30px;
+	color: #666;
+	text-align: center;
+	position: relative;
+	border: 5px solid #6a66bb;
+	width: 890px;
+	margin: 0 auto;
+	background: #fff;
+	padding-bottom: 65px;
+}
+/**
+ * 条款部分
+ */
+
+.tk_body_bg {
+	background: #413d92 url(../img/tiaokuan_bg.jpg) top center no-repeat;
+}
+.tk_content {
+	border: 5px solid #6a66bb;
+	width: 900px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 30px 40px;
+}
+.tk_content p.tk_title {
+	font-size: 22px;
+	font-weight: bold;
+	color: #666;
+	text-align: center;
+	padding-bottom: 30px;
+	border-bottom: 2px solid #efefef;
+}
+.tk_content h3 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	text-align: center;
+	line-height: 24px;
+	padding: 20px 0px 5px 0px;
+}
+.tk_content p {
+	line-height: 30px;
+	font-size: 14px;
+	color: #666;
+}
+.tk_content span {
+	font-weight: bold;
+}
+/*支付页面*/
+
+.zfym_body_bg {
+	background: #413d92 url(../img/zfym_02.jpg) top center no-repeat;
+}
+.zfym_jine {
+	height: 50px;
+}
+.zfym_cpxq {
+	width: 922px;
+	height: 120px;
+	border: 1px solid #6763B9;
+	background-color: #EFEEFE;
+}
+.zfym_cpxq table {
+	width: 910px;
+	text-align: center;
+	margin: 0 auto;
+}
+.zfym_cpxq table tr th {
+	width: 33%;
+}
+.cpxq_one_tr {
+	height: 45px;
+}
+.cpxq_one_tr th {
+	border-bottom: 1px dashed #DAD8FD;
+}
+.cpxq_two_tr {
+	height: 72px;
+}
+.cpxq_two_tr td {
+	color: #6763B9;
+}
+.zfym_zffs {
+	height: 250px;
+	margin-top: 65px;
+}
+.zffs_title {
+	height: 30px;
+	border-bottom: 2px solid #EDEDED;
+	line-height: 30px;
+}
+.title_one {
+	width: 220px;
+}
+.title_two {
+	width: 90px;
+	border-bottom: 2px solid #2F2B88;
+	text-align: center;
+}
+.zffs_body {
+	height: 200px;
+}
+.body_logo {
+	width: 220px;
+	height: 200px;
+}
+.body_form {
+	width: 700px;
+	height: 150px;
+	color: #828282;
+	margin-top: 60px;
+}
+.body_form tr {
+	width: 650px;
+	height: 50px;
+	margin: 15px auto;
+}
+.body_form tr th {
+	width: 75px;
+	text-align: right;
+}
+.body_form tr input {
+	width: 290px;
+	height: 30px;
+	line-height: 30px;
+	border: 2px solid #CBCBCB;
+	padding-left: 5px;
+}
+.body_form tr td a {
+	text-decoration: underline;
+	color: #828282;
+}
+.body_limg {
+	margin-top: 70px;
+}
+/*快速投保*/
+
+.kstb {
+	width: 990px;
+	text-align: left;
+	margin: 0 auto;
+}
+.kstb_form {
+	width: 363px;
+	height: 100%;
+	background-color: #FAFAFA;
+	border: 1px solid #D2D2D2;
+	padding: 20px;
+}
+.kstb_form tr th {
+	width: 75px;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	color: #7F7F7F;
+	vertical-align: top;
+}
+.kstb_form table td {
+	height: 50px;
+	line-height: 50px;
+}
+.kstb_form table tr input {
+	color: #A1A1A1;
+	width: 285px;
+	height:30px;
+	line-height: 30px;
+	border: 2px solid #D2D2D2;
+	background: transparent;
+}
+/*
+.kstb_form table tr p{
+	line-height: 27px;
+	height: 27px;
+	color:#A1A1A1;
+	width: 285px;
+}*/
+
+.kstb_form table tr select {
+	width: 140px;
+	border: 2px solid #d2d2d2;
+}
+.kstb_form .tr_tips th,
+.kstb_form .tr_tips td {
+	line-height: 27px;
+	height: 27px;
+	_line-height: 25px;
+	_height: 25px;
+	color: #A1A1A1;
+	width: 285px;
+}
+.kstb_h2 {
+	width: 100%;
+	color: #4963ae;
+	font-weight: bold;
+	font-size: 18px;
+}
+.form_table_one {
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+}
+.table_two_title {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.kstb_content {
+	float: left;
+	width: 530px;
+	background-color: #6A66BB;
+	height: 100%;
+	margin-left: 10px;
+}
+.kstb_shuoming {
+	width: 520px;
+	background-color: #fff;
+	margin: 5px;
+	padding-bottom: 75px;
+	*padding-bottom: 52px;
+	_padding-bottom: 24px;
+}
+.title_btbr {
+	height: 50px;
+	line-height: 50px;
+}
+.title_btbr_content {
+	margin-left: 35px;
+}
+.title_btbr_check {
+	margin-left: 20px;
+}
+.kstb_shuoming p {
+	line-height: 25px;
+	font-size: 14px;
+	color: #666;
+	padding: 10px 25px;
+}
+.cbfab {
+	width: 475px;
+	padding: 5px 25px;
+}
+.cbfab_table {
+	border: 4px solid #DCDEF7;
+	color: #6763B9;
+}
+.cbfab_table tr {
+	height: 30px;
+}
+.cbfab_table tr td {
+	border: 2px solid #DCDEF7;
+	padding-left: 5px;
+}
+.cbfab_bgcolor {
+	background-color: #F0F0FC;
+}
+.tk_link {
+	font-size: 14px;
+	color: #0078ff;
+}
+.tk_link:hover {
+	text-decoration: underline;
+}
+.kstb_tips {
+	font-size: 14px;
+	color: #666;
+}
+
+.title_same_checkbox {
+	b2order: 1px solid #d2d2d2;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../img/checkbox.jpg) center center no-repeat;
+}
+
+.title_same_checkbox_active {
+	background: url(../img/checkboxed.png) center center no-repeat;
+	vertical-align: middle;
+}
+/* 模拟 select start */
+
+.select_box {
+	float: left;
+	color: #444;
+	position: relative;
+	cursor: pointer;
+	width: 110px;
+	height: 27px;
+	line-height: 27px;
+	border: 2px solid #d2d2d2;
+	
+	z-index: 10;
+}
+.selet_open {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+	height: 100%;
+	background: url(../img/select_triangle_bg.jpg) no-repeat center center;
+}
+.select_txt {
+	display: inline-block;
+	padding-left: 10px;
+	width: 100px;
+	height: 27px;
+	line-height: 27px;
+	cursor: text;
+	overflow: hidden;
+}
+.option {
+	width: 110px;
+	border: solid 1px #EDE7D6;
+	background: #d2d2d2;
+	position: absolute;
+	top: 28px;
+	left: -1px;
+	z-index: 9999999;
+	overflow: hidden;
+	display: none;
+}
+.option a {
+	display: block;
+	height: 26px;
+	line-height: 26px;
+	text-align: left;
+	padding: 0 10px;
+	width: 100%;
+	background: #fff;
+}
+.option a:hover {
+	background: #FDE0E5;
+}
+/* 模拟 select end */
