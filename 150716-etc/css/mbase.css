@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* reset */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dd,
+ul,
+ol,
+form,
+input,
+textarea,
+th,
+td,
+select {
+	margin: 0;
+	padding: 0;
+}
+em {
+	font-style: normal;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+table {
+	border-collapse: collapse;
+}
+input,
+textarea {
+	outline: none;
+}
+textarea {
+	resize: none;
+	overflow: auto;
+}
+body {
+	font-size: 12px;
+	font-family: "微软雅黑";
+	/*font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;*/
+}
+
+/*========移动端========*/
+a,
+img {
+	-webkit-touch-callout: none;
+	/* 禁止长按链接与图片弹出菜单 */
+}
+html,
+body {
+	-webkit-user-select: none;
+	/* 禁止选中文本（如无文本选中需求，此为必选项） */
+	
+	user-select: none;
+}
+/*========移动端========*/
+
+/* end reset */
+/* public */
+
+.clear {
+	zoom: 1;
+}
+.clear:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/* end public */

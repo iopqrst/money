@@ -1,0 +1,553 @@
+@charset "utf-8";
+/* page public*/
+html {
+	font-size: 20px;
+}
+body {
+	background: #fff;
+	min-width: 640px;
+}
+.title {
+	background: url(../img/title.jpg) repeat-x 0 0;
+	width: 100%;
+	height: 4rem;
+	box-shadow: 1px 0px 0.5rem rgba(200, 200, 200, 1);
+}
+.title h1 {
+	height: 4rem;
+	line-height: 4rem;
+	color: #666666;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	text-align: center;
+}
+
+.radius {
+	margin: 0px auto;
+	border: 0.1rem solid #EAEAEA;
+	border-radius: .5rem;
+}
+
+input.width30 {
+	width: 30%;
+}
+input.width40 {
+	width: 40%;
+}
+input.width50 {
+	width: 50%;
+}
+input.width60 {
+	width: 60%;
+}
+
+/**
+ * 按钮容器 
+ */
+.tb_btn_box {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.tb_btn_box a:link {
+	color: #fff;
+}
+.tb_btn_box a:visited{
+	color: #fff;
+}
+.tb_btn_box a:active{
+	color: #fff;
+}
+
+/**
+ * 按钮
+ */
+.tb_btn_ok,.tb_btn_cancel {
+	margin: 0px auto;
+	
+	width: 30rem;
+	height: 4rem;
+	line-height: 4rem;
+	display: block;
+	border-radius: 0.5rem;
+	
+	color: #fff;
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.tb_btn_ok {
+	background-color: #479be9;
+}
+
+.tb_btn_cancel {
+	background-color: #bababa;
+}
+
+.tb_btn:hover {
+	text-decoration: none;
+	background-color: #669bcc;
+}
+
+
+
+/**
+ * 投保信息部分
+ */
+.tbxx {
+	width: 94%;
+	margin: 1.8rem auto;
+	margin-bottom: 0px;
+	
+	background-color: #fafafa;
+}
+
+.input-box,.input-box2,.input-box3 {
+	width: 86%;
+	margin: 1rem auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0;
+	
+	font-size: 1.2rem;
+}
+
+.input-box {
+	border: 0.1rem solid #EAEAEA;
+	border-radius: .5rem;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	background-color: #fff;
+}
+
+.input-box2 {
+	height: 1.5rem;
+	line-height: 1.5rem;
+}
+
+.input-box3 {
+	height: 2.5rem;
+	line-height: 2.5rem;
+}
+
+.input_label {
+	
+}
+
+.tbxx_input {
+	/*background-color: #EDE7D6;*/
+	border: 0;
+	outline: none;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	
+	color: #666666;
+	font-size: 1.2rem;
+	width: 80%;
+}
+
+.tbxx_input::-webkit-input-placeholder { color:#666; }
+.tbxx_input::-moz-input-placeholder { color:#666; }
+
+.link {
+	text-decoration: underline;
+	color: #0073dd;
+	font-size: 1.2rem;
+}
+
+.input_label,.input_checkbox,.input_radio {
+	vertical-align: top;
+}
+
+.input_checkbox2,.input_radio {
+	vertical-align: baseline;
+}
+
+.input_checkbox {
+	width: 1.35rem;
+	height: 1.35rem;
+}
+
+.input_radio {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.label-radio {
+	display: inline-block;
+	height: 1.45rem;
+	width: 1.45rem;
+	vertical-align: middle;
+	cursor: pointer;
+	background: transparent url(../img/radio.png) no-repeat 0 0;
+}
+
+.label-radio-checked {
+	display: inline-block;
+	height: 1.45rem;
+	width: 1.45rem;
+	vertical-align: middle;
+	cursor: pointer;
+	background: transparent url(../img/radio-checked.png) no-repeat 0 0;
+}
+
+.checkbox {
+	display: inline-block;
+	height: 1.35rem;
+	width: 1.35rem;
+	vertical-align: middle;
+	cursor: pointer;
+	background: transparent url(../img/checkbox.jpg) no-repeat 0 0;
+}
+
+.checkbox-checked {
+	display: inline-block;
+	height: 1.35rem;
+	width: 1.35rem;
+	vertical-align: middle;
+	cursor: pointer;
+	background: transparent url(../img/checkbox-checked.jpg) no-repeat 0 0;
+}
+
+.calculate_info {
+	height: 8rem;
+	line-height: 8rem;
+	font-size: 34px;
+	font-weight: bold;
+	color:#ff473f;
+	text-align: center;
+}
+
+
+/* 模拟 select start */
+
+.select_box {
+	display: inline-block;
+	color: #444;
+	position: relative;
+	cursor: pointer;
+	width: 75%;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	/*border: 0.05rem solid #d2d2d2;*/
+	
+	z-index: 10;
+}
+.selet_open {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1.5rem;
+	height: 100%;
+	z-index: 1;
+	background: url(../img/select_triangle_bg.jpg) no-repeat center center;
+}
+.select_txt {
+	display: inline-block;
+	padding-left: 0.5rem;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	cursor: text;
+	overflow: hidden;
+}
+.option {
+	width: 100%;
+	border: solid 0.05rem #EDE7D6;
+	background: #d2d2d2;
+	position: absolute;
+	top: 2.8rem;
+	left: -0.05rem;
+	z-index: 9999999;
+	overflow: hidden;
+	display: none;
+}
+.option a {
+	display: block;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	text-align: left;
+	padding: 0 0.5rem;
+	width: 100%;
+	background: #fff;
+}
+.option a:hover {
+	background: #FDE0E5;
+}
+/* 模拟 select end */
+
+/*遮罩部分*/
+
+.us_panel_msk {
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	
+	width: 100%;
+	height: 200%;
+	overflow-y: auto;
+	
+	display: none;
+}
+
+.us_panel_menu_t {
+	width: 90%;
+	position: absolute;
+	bottom: 15%;
+	left: 5%;
+	background: #fff;
+	z-index: 99;
+	
+	padding-bottom: 2rem;
+	
+	display: none;
+}
+
+.us_panel_msk.show , .us_panel_menu_t.show {
+	display: block;
+}
+
+.us_panel_btn_box {
+	height: 2rem; 
+	width: 100%; 
+}
+
+.us_panel_btn_close {
+	height: 2rem; 
+	width: 2rem; 
+	background: #8ec31e url(../img/close.jpg) no-repeat 0 0; 
+	position: absolute; 
+	right: 0; 
+	top: 0;
+}
+
+.us_panel_content {
+}
+
+.us_panel_content h1 {
+	color: #8ec31e;
+	font-size: 2rem;
+	font-weight: bold;
+	
+	text-align: center;
+	padding: 0.5rem 0;
+}
+
+.us_panel_content > p {
+	color: #66666;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.4rem;
+	padding: 0 1.5rem;
+}
+
+.us_panel_content p > span{
+	font-weight: bold;
+}
+
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone4/4s */
+	
+	.us_panel_menu_t {
+		width: 90%;
+		position: absolute;
+		bottom: 1%;
+		left: 5%;
+		background: #fff;
+		z-index: 99;
+		
+		padding-bottom: 1rem;
+		
+		display: none;
+	}
+	
+	.us_panel_content h1 {
+		color: #8ec31e;
+		font-size: 1.5rem;
+		font-weight: bold;
+		
+		text-align: center;
+		padding: 0.5rem 0;
+	}
+	
+	.us_panel_content > p {
+		color: #66666;
+		font-size: .6rem;
+		font-weight: normal;
+		line-height: 1rem;
+		padding: 0 .8rem;
+	}
+
+}
+/*遮罩部分 end*/
+/**
+ * 信息确认
+ */
+
+.xxqr_content {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	color: #666666;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.xxqr_content li {
+	margin: 0px auto;
+	line-height: 60px;
+}
+
+.xxqr_content .ttitle {
+	font-weight: normal;
+	
+	display: inline-block;
+	width: 35%;
+	text-align: right;	
+}
+
+/*
+ * 产品介绍部分
+ */
+.top_pic{
+	 width: 100%; 
+	 margin:0 auto; 
+	 height:auto;
+}
+.top_pic img{
+	width: 100%;
+	text-align: center;
+	height: auto; 
+	margin:0 auto -4px;
+}
+.top_tip{
+	background-color: #8EC21F;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	color: #fff;
+	font-size: 26px;
+}
+.cpjs {
+	width: 94%;
+	margin: 1.8rem auto;
+	margin-bottom: 0px;
+	background-color: #F3FCE1;
+}
+.radius_green {
+	border: 0.1rem solid #C2DF82;
+	border-radius: .5rem;
+}
+.cpjs_content {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+
+	color: #666666;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.cpjs_content li {
+	margin: 0px auto;
+	line-height: 40px;
+	padding: 1rem;
+}
+
+.cpjs_content .ttitle {
+	font-weight: normal;
+	width: 35%;
+	text-align: right;	
+	padding-left:1rem;
+	font-weight: bold;
+	color:#8FC21D;
+}
+.cpjs_border{
+	border-top:2px solid #C2DF82;
+	border-bottom:2px solid #C2DF82;
+}
+.tbxx table{
+	margin:0 auto;
+	font-size: 26px;
+	width:100%;
+}
+.tbxx table tr{
+	margin: 0px auto;
+	line-height: 60px;
+	padding: 1rem;
+	text-align: left;
+	width:100%;
+}
+.tbxx table tr td{
+	width:45%;
+	padding-left:20px;
+}
+.cpjs_border_top_bottom_hui{
+	border-top:2px solid #EAEAEA;
+	border-bottom:2px solid #EAEAEA;
+}
+.cpjs_border_right_hui{
+	border-right:2px solid #EAEAEA;
+}
+.cpjs_color_black{
+	color: #444444;
+}
+.cpjs_color_red{
+	color:red;
+}
+.cpjs_color_hui{
+	color: #9A9A9A;
+}
+.cpjs_baozhang_content{
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+	color: #666666;
+	font-size: 1.2rem;
+	padding-left:20px;
+}
+.cpjs_font_12{
+	font-size: 1rem;
+}
+.cpjs_font_w{
+	font-weight: bold;
+}
+.cpjs_footer{
+	width:100%;
+	font-size: 25px;
+	margin:0px auto;
+	text-align: center;
+	color: #9A9A9A;
+}
+.cpjs_footer a{
+	text-decoration:underline;
+	color: #666666;
+	margin:0px 20px;
+}
+.cpjs_rexian{
+	margin:10px auto;
+	font-size: 23px;
+}
+
+/*
+ * 预购申请部分
+ */
+.ygsq{
+	text-align: center;
+}
+.ygsq img{
+	width: 30%;
+	text-align: center;
+	height: auto; 
+	margin:40px auto;
+}
+.ygsq_green{
+	color:#8FC21F;
+	font-size: 35px;
+}
+.ygsq_hui{
+	color:#7F7F7F;
+	font-size: 23px;
+	margin-top: 15px;
+	margin-bottom:40px ;
+}
+
+

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>ETC专享护航险 - 投保信息</title>
+		<link rel="stylesheet" type="text/css" href="css/mbase.css">
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script type="text/javascript">
+			//移动端版本兼容
+			if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+				var version = parseFloat(RegExp.$1);
+				if(version>2.3){
+					var phoneScale = parseInt(window.screen.width)/640;
+					document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+				}else{
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+			}else{
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<div class="title">
+			<h1>填写投保信息</h1>
+		</div>
+
+		<div class="tbxx radius">
+			<div class="input-box3">
+				<label class="input_label">请选择您的车型：</label>
+				<label class="label-radio-checked customer-radio" data-sval="0"></label>
+				<label class="input_label2">5座车</label>&nbsp;&nbsp;
+				<label class="label-radio customer-radio" data-sval="1"></label>
+				<label class="input_label2">7座车</label>
+				<input type="hidden" id="S_car_category" value="0" />
+			</div>
+			<div class="input-box">
+				<label class="input_label">车牌号：</label>
+				<input class="tbxx_input" type="text" name="" placeholder="京0000000" />
+			</div>
+
+			<div class="input-box">
+				<label class="input_label">车架号：</label>
+				<input class="tbxx_input" type="text" name="" placeholder="作为车辆唯一标识" />
+			</div>
+
+			<div class="input-box">
+				<label class="input_label">车主（单位）名称：</label>
+				<input class="tbxx_input width50" type="text" name="" placeholder="" />
+			</div>
+
+			<div class="input-box">
+				<label class="input_label" style="display: inline-block; vertical-align: top;">证件类型：</label>
+				<div class="select_box">
+					<span class="select_txt">请选择</span>
+					<a class="selet_open"><b></b></a>
+					<div class="option">
+						<a href="javascript:;" data-sval="S_select_doc_type_two|0">组织机构代码</a>
+						<a href="javascript:;" data-sval="S_select_doc_type_two|1">身份证</a>
+					</div>
+					<input type="hidden" id="S_select_doc_type_two" value="0" />
+				</div>
+			</div>
+
+			<div class="input-box">
+				<label class="input_label">证件号：</label>
+				<input class="tbxx_input" type="text" name="" placeholder="" />
+			</div>
+
+			<div class="input-box">
+				<label class="input_label">手机：</label>
+				<input class="tbxx_input" type="text" name="" placeholder="" />
+			</div>
+
+			<div class="input-box2">
+				<label class="checkbox customer-checkbox" data-target="S_isNeedList" data-flag="1"></label>
+				<label class="input_checkbox">是否需要电子保单 &nbsp;</label>
+				<input type="hidden" id="S_isNeedList" value="0" />
+				<!--如选中，值会改为1,否则为0-->
+			</div>
+
+			<div class="input-box" id="S_email" style="display: none;">
+				<label class="input_label">邮箱：</label>
+				<input class="tbxx_input" type="text" name="" placeholder="便于接受电子保单" />
+			</div>
+
+			<div class="input-box2">
+				<label class="checkbox-checked customer-checkbox" data-target="S_agree" id="S_label_agree"></label>
+				<input type="hidden" id="S_agree" value="1" />
+				<!--如选中，值会改为1,否则为0-->
+				<label class="input_checkbox">我已阅读并同意<a href="javascript:;" class="link" style="vertical-align: top;" id="S_show_pop">《投保声明》</a>&nbsp;</label>
+			</div>
+
+			<div class="calculate_info">
+				<span style="color:#ff473f;">保费：¥40元</span>
+			</div>
+
+		</div>
+
+		<div class="tb_btn_box">
+			<a href="xxqr.html" class="tb_btn_ok">提交投保</a>
+		</div>
+
+		<div class="us_panel_msk"></div>
+		<div class="us_panel_menu_t">
+			<div class="us_panel_content">
+				<div class="us_panel_btn_box">
+					<span class="us_panel_btn_close" id="S_close_protocal"></span>
+				</div>
+				<!--<div style="height: 60%; overflow-y: auto;">-->
+				<h1>投保声明</h1>
+
+				<p>1、本人兹声明上述各项内容填写属实。</p>
+				<p>2、本人已认真阅读并理解<span>《机动车驾乘人员团体意外伤害保险条款（2015版）》、《附加团体意外伤害医疗保险条款（2010版）》、《附加团体意外伤害住院津贴保险条款（2010版）》、《假日无忧综合意外伤害保险条款（2014版）》</span>，并特别就条款有关责任免除和投保人、被保险人义务的内容进行阅读。本投保人特此同意接收条款全部内容。</p>
+				<p>3、除另有约定外，本保障计划的受益人为法定。</p>
+				<p>4、本人接受以阳光保险集团股份有限公司提供的电子保单作为本投保书成立的合法有效凭证，具有完全证据效力。</p>
+				<p>5、在中国法律允许或要求的范围内，本人同意或授权承保公司将其个人信息及保单信息提供给相关产品或服务信息平台以做合理利用。</p>
+				<!--</div>-->
+				<div class="tb_btn_box">
+					<a href="javascript:;" class="tb_btn_ok" style="width: 15rem;" id="S_beok_prototal">确定</a>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+		<script>
+			
+		</script>
+	</body>
+
+</html>
