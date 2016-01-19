@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.frm_checkbox_label {
+				display: inline-block;
+				text-align: left;
+				cursor: pointer;
+				margin-right: 1em;
+			}
+			
+			.icon_checkbox {
+				background: url("img/page_login_z260591.png") 0 -56px no-repeat;
+				width: 16px;
+				height: 16px;
+				vertical-align: middle;
+				display: inline-block;
+				margin-right: 3px;
+				margin-top: -2px;
+			}
+			
+			.selected .icon_checkbox {
+				background: url("img/page_login_z260591.png") 0 -82px no-repeat;
+			}
+			
+			.frm_checkbox {
+				position: absolute;
+				left: -999em;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<label class="frm_checkbox_label" for="rememberCheck">
+			<i class="icon_checkbox"></i>
+			<input type="checkbox" class="frm_checkbox" id="rememberCheck"> 记住帐号
+		</label>
+
+		<script type="text/javascript">
+			var oCheckbox = document.getElementById("rememberCheck");
+			oCheckbox.onchange = function() {
+				var oLabel = getClassEles(document,"frm_checkbox_label")[0];
+				
+				if( hasClass(oLabel,'selected') ) {
+					removeClass(oLabel,'selected');
+				} else {
+					addClass(oLabel,'selected');
+				}
+			};
+
+			function hasClass(ele, cls) {
+				return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+			}
+
+			function addClass(ele, cls) {
+				if (!hasClass(ele, cls)) ele.className += " " + cls;
+			}
+
+			function removeClass(ele, cls) {
+				var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+				ele.className = ele.className.replace(reg, ' ');
+			}
+
+			function getClassEles(obj, cls) {
+				if (obj.getElementsByClassName) {
+					return obj.getElementsByClassName(cls);
+				} else {
+					var tags = obj.getElementsByTagName('*');
+					var aTargetEles = [];
+					var oReg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+					for (var i = 0; i < tags.length; i++) {
+						if (tags[i].className.match(oReg)) {
+							aTargetEles.push(tags[i]);
+						}
+					}
+					return aTargetEles;
+				}
+			}
+		</script>
+	</body>
+
+</html>

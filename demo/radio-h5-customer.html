@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a,
+			button,
+			input,
+			select {
+				outline: 0; /*不加这段会有边框*/;
+				-webkit-tap-highlight-color: transparent;
+			}
+			
+			button,
+			input,
+			select {
+				border: none;
+				background: 0 0;
+				vertical-align: middle;
+				font-family: Microsoft YaHei, Helvetica, sans-serif;
+				cursor: pointer;
+				-webkit-appearance: none;
+			}
+			
+			.label1 label,
+			.label1.indent30 label {
+				position: relative;
+				width: 100%;
+			}
+			
+			.label1.indent30 label {
+				text-indent: -22px;
+			}
+			
+			.question_list label {
+				display: inline-block;
+				margin: 0 0 5px;
+				color: #3e4346;
+				text-align: justify;
+				font-size: 14px;
+			}
+			
+			.radio-input {
+				display: inline-block;
+				margin-top: -2px;
+				margin-right: 7px;
+				margin-bottom: 1px;
+				width: 15px;
+				height: 15px;
+				border: 1px solid #cfcfd4;
+				border-radius: 50%;
+				background-color: #fafaf5;
+				vertical-align: middle;
+			}
+			
+			.radio-input:checked:before {
+				position: absolute;
+				top: 3px;
+				left: 1px;
+				display: inline-block;
+				width: 10px;
+				height: 8px;
+				background: url(img/gou.jpg) no-repeat;
+				background-size: 10px;
+				content: '';
+			}
+			
+			.radio-input:checked {
+				position: relative;
+				border: 1px solid #41cd8c;
+				background-color: #41cd8c;
+			}
+		</style>
+	</head>
+
+	<body>
+		<label>
+			<input type="radio" class="radio-input" name="question04_1" value="2" />极轻体力劳动（卧床病人）</label>
+		<label>
+			<input type="radio" class="radio-input" name="question04_1" value="3" />轻体力劳动（坐姿以手或腿部轻度活动为主的工作人员。例如：学生、办公室、退休等）</label>
+		<label>
+			<input type="radio" class="radio-input" name="question04_1" value="4" />中等体力劳动（以手和臂、臂和腿、腿和躯干持续动作为主的工作者。例如：粉刷工、电焊工）</label>
+		<label>
+			<input type="radio" class="radio-input" name="question04_1" value="5" />重体力劳动（以臂和躯干负荷工作为主的工作者。例如：搬运工、割草工、挖掘工）</label>
+	</body>
+
+</html>
